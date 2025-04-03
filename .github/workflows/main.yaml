@@ -1,4 +1,4 @@
-name: Sonarqube Analysis, Version Release and Deployment
+name: Release and Deployment
 on:
   push:
     branches: [Frontend]
@@ -33,11 +33,9 @@ jobs:
       - name: Semantic Release
         id: semantic-release
         env:
-          GITHUB_TOKEN: ${{ secrets.7 }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           npx semantic-release
           NEW_VERSION=$(node -p "require('./package.json').version")
           echo "new_release_version=${NEW_VERSION}" >> $GITHUB_OUTPUT
-          echo "Version released: ${NEW_VERSION}"
-
-  
+          echo "Version released: ${NEW_VERSION}"      
