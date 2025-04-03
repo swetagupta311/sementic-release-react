@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /employee/add-employee
+Disallow: /employee/view-employees
+Disallow: /states/add-states
+Disallow: /states/add-outlet
+Disallow: /activity/add-activity
+Disallow: /activity/view-activity
+Disallow: /brands/add-brands
+Disallow: /brands/view-brands
+Disallow: /dashboard
