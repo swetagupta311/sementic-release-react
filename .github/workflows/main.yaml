@@ -27,7 +27,7 @@ jobs:
           node-version: '20'
       
       - name: Install dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
              npm install -D conventional-changelog-angular
       
       - name: Semantic Release
